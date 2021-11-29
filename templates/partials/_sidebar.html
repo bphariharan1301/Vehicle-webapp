@@ -1,0 +1,42 @@
+
+
+{% load static %}
+
+<div class="sidebar">
+  <div class="profile">
+    <img src="{% static 'img/logo.png' %}" alt="logo">
+  </div>
+    <ul>
+      <li>
+        {% if '/' == request.path %}
+          <a href="{% url 'home' %}" class="active">
+        {% else %}
+          <a href="{% url 'home' %}">
+        {% endif %}
+          <span class="icon"><i class="fas fa-home"></i></span>
+            <span class="item">Home</span>
+        </a>
+      </li>
+      <li>
+        {% if 'list_vehicle' in request.path %}
+          <a href="{% url 'list_vehicle' %}" class="active">
+        {% else %}
+            <a href="{% url 'list_vehicle' %}">
+        {% endif %}
+          <span class="icon"><i class="fas fa-motorcycle"></i></span>
+          <span class="item">List Vehicles</span>
+        </a>
+      </li>
+      <li>
+        {% if 'remove_vehicle' in request.path %}
+          <a href="{% url 'remove_vehicle' %}" class="active">
+        {% else %}
+          <a href="{% url 'remove_vehicle' %}">
+        {% endif %}
+          <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+          <span class="item">REMOVE VEHICLE</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

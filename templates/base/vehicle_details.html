@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+  <div class="body1">
+    <div class="body1-top row">
+      <img src="{% static 'img/logo.png' %}" class="row-image"  alt="LOGO">
+      <!-- <div class="circle1 col col-md-2"> -->
+      <!-- </div> -->
+      <div class="camera1 col col-md-2">
+        <div class="text-cam" >
+          CAMERA 1
+        </div>
+      </div>
+      <div class="camera1 col col-md-2">
+        <div class="text-cam">
+          CAMERA 2
+        </div>
+      </div>
+      <!-- <div class="button1 col col-md-2 offset-md-1">on</div>
+  <div class="button1 col col-md-2 offset-md-1">off</div> -->
+      <div class="button1  bg-green">
+        <div class="text-btn" id="txt-on">
+          ON
+        </div>
+      </div>
+      <div class="button2">
+        <div class="text-btn  text-red">
+            OFF
+        </div>
+      </div>
+    </div>
+    <div class="body-mid">
+      <div class="body1-mid">
+        <img src="{{ vehicle_detail.photo_main.url }}" alt="MY IMAGE" style=" padding-left:2rem; width: 90%; height: 90%; border: radius 50% ">
+      </div>
+      <div class="body1-side1">
+        <div class="text-btn">
+          Speed 
+          {{ vehicle_detail.speed }}
+        </div>
+        </div>
+      <div class="body1-side2">
+        <div class="text-btn">
+          Avg. Speed
+          {{ vehicle_detail.avg_speed }}
+        </div>
+      </div>
+    </div>
+    <div class="body-bottom">
+      <div class="body1-bottom">
+        <div class="bottom-container one1">
+          <div class="text-btn">
+            Engine status {{ vehicle_detail.engine_status }}
+          </div>
+        </div>
+        <div class="bottom-container two1">
+          <div class="text-btn">
+            Fuel Level {{ vehicle_detail.fuel_level }}
+          </div>
+        </div>
+        <div class="bottom-container three1">
+          <div class="text-btn">
+            Temperature {{ vehicle_detail.temp }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}

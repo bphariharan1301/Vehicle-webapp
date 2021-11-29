@@ -1,0 +1,43 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+  <table class="styled-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Speed</th>
+            <th>Avg. Speed</th>
+            <th>Temperature</th>
+            <th>Fuel Level</th>
+            <th>Engine Status</th>
+            <th>More Info</th>
+        </tr>
+    </thead>
+    <tbody>
+      {% for vehicle in vehicles %}
+        <tr class="active-row">
+            <td class="row-name" style="width: 100%;">{{ vehicle.name }}</td>
+            <td class="row-name">{{ vehicle.speed }}</td>
+            <td class="row-name">{{ vehicle.avg_speed }}</td>
+            <td class="row-name">{{ vehicle.temp }}</</td>
+            <td class="row-name">{{ vehicle.fuel_level }}</</td>
+            <td class="row-name">{{ vehicle.engine_status }}</</td>
+            <td class="row-name">
+              <a href="{% url 'vehicle_details' vehicle.pk %}" class="row-link">
+                Click Here
+              </a>
+            </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</div>
+
+
+
+{% endblock %}

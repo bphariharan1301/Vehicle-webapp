@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 from pathlib import Path
 import os
 from dotenv import load_dotenv
+import cloudinary
 
 load_dotenv()
 
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -139,3 +141,15 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#  Cloudinary Config
+
+cloudinary.config(
+    cloud_name="dloewksku",
+    api_key="785188229373933",
+    api_secret="ka4aB0hTXtNg3mD-Y5ydxLzbaSs",
+    upload_prefix="http://api.cloudinary.com"
+)
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+

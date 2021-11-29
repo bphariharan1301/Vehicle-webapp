@@ -1,0 +1,230 @@
+body.active .wrapper .sidebar {
+  left: -225px;
+}
+
+.wrapper .sidebar {
+  /* display: inline-block !important; */
+  background: rgb(5, 68, 104);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 230px;
+  height: 100%;
+  padding: 20px 0;
+  transition: all 0.5s ease;
+}
+
+.wrapper .sidebar .profile {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.wrapper .sidebar .profile img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wrapper .sidebar .profile h3 {
+  color: #ffff;
+  margin: 10px 0 5px;
+}
+
+.wrapper .sidebar ul li a {
+  display: block;
+  padding: 13px 30px;
+  border-bottom: 1px solid #10558d;
+  color: rgb(241, 237, 237);
+  font-size: 16px;
+  position: relative;
+}
+
+.wrapper .sidebar ul li a .icon {
+  color: #dee4ec;
+  width: 30px;
+  display: inline-block;
+}
+
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active {
+  color: #0c7db1;
+
+  background: white;
+  border-right: 2px solid rgb(5, 68, 104);
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon {
+  color: #0c7db1;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before {
+  display: block;
+}
+
+.wrapper .section {
+  width: calc(100% - 225px);
+  margin-left: 225px;
+  transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar {
+  background: rgb(7, 105, 185);
+  height: 80px;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.wrapper .section .top_navbar .main-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.wrapper .section .top_navbar .main-nav .nav-profile img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 1rem 2rem;
+}
+
+.wrapper .section .top_navbar .hamburger .nav-profile {
+  width: 20px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.wrapper .section .top_navbar .main-nav .hamburger {
+  margin: 1rem 0.5rem;
+}
+
+.wrapper .section .top_navbar .hamburger a {
+  font-size: 28px;
+  color: #f4fbff;
+  justify-content: center;
+}
+
+.wrapper .section .top_navbar .hamburger a:hover {
+  color: #a2ecff;
+}
+
+/* HELP PART */
+.body1 {
+  position: relative;
+  left: 230px;
+  width: 85%;
+  height: 640px;
+  padding: 3%;
+  background-color: lightsalmon;
+}
+
+.body1-top {
+  margin: 0;
+  width: 100%;
+  height: 20%;
+  top: 20px;
+  padding: 1%;
+}
+
+.circle1 {
+  left: 50px;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 0 30px 0 0;
+}
+
+.camera1 {
+  width: 200px;
+  height: 85px;
+  background-color: white;
+  margin: 0 30px;
+}
+
+.button1 {
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 85px;
+  right: 70px;
+  background-color: white;
+}
+
+.button2 {
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 85px;
+  right: 240px;
+  background-color: white;
+}
+
+.body-mid {
+  position: relative;
+  height: 50%;
+  width: 100%;
+}
+
+.body1-mid {
+  width: 70%;
+  height: 95%;
+  background-color: white;
+  margin: 1%;
+}
+
+.body1-side1 {
+  position: absolute;
+  padding: 1%;
+  width: 25%;
+  height: 43%;
+  background-color: white;
+  top: 0px;
+  right: 20px;
+}
+.body1-side2 {
+  position: absolute;
+  padding: 1%;
+  width: 25%;
+  height: 43%;
+  background-color: white;
+  top: 140px;
+  right: 20px;
+}
+
+.body-bottom {
+  position: relative;
+  width: 100%;
+  height: 30%;
+}
+
+.bottom-container {
+  background-color: white;
+  position: absolute;
+  display: block;
+}
+
+.one1 {
+  padding: 1%;
+  width: 33%;
+  height: 118px;
+  left: 10px;
+}
+.two1 {
+  padding: 1%;
+  width: 33%;
+  height: 118px;
+  left: 38%;
+}
+
+.three1 {
+  padding: 1%;
+  width: 25%;
+  height: 118px;
+  right: 20px;
+}
