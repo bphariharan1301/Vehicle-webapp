@@ -21,7 +21,7 @@
         </div>
       </div>
       <!-- <div class="button1 col col-md-2 offset-md-1">on</div>
-  <div class="button1 col col-md-2 offset-md-1">off</div> -->
+        <div class="button1 col col-md-2 offset-md-1">off</div> -->
       <div class="button1  bg-green">
         <div class="text-btn" id="txt-on">
           ON
@@ -69,7 +69,16 @@
         </div>
       </div>
     </div>
+    <a href="{% url 'remove_vehicle' vehicle_detail.pk %}">
+      <button type="submit" class="btn-submit py-2">
+        Remove Vehicle
+      </button>
+    </a>
   </div>
+
+  
+
+ 
 
 
 {% endblock %}

@@ -27,8 +27,13 @@ def add_vehicle(request):
   else: 
     return render(request, 'base/add_vehicle.html')
 
-def remove_vehicle(request):
-  return render(request, 'base/remove_vehicle.html')
+def remove_vehicle(request, id):
+  
+  vehicle = get_object_or_404(Vehicle, pk=id)
+
+  vehicle.delete()
+
+  return redirect('list_vehicle')
 
 def list_vehicle(request):
   vehicles = Vehicle.objects.all()

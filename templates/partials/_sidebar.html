@@ -27,16 +27,6 @@
           <span class="item">List Vehicles</span>
         </a>
       </li>
-      <li>
-        {% if 'remove_vehicle' in request.path %}
-          <a href="{% url 'remove_vehicle' %}" class="active">
-        {% else %}
-          <a href="{% url 'remove_vehicle' %}">
-        {% endif %}
-          <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
-          <span class="item">REMOVE VEHICLE</span>
-        </a>
-      </li>
     </ul>
   </div>
 </div>
